@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * Write a description of class Tempatures here.
@@ -13,10 +14,23 @@ public class Temperatures
     /**
      * Constructor for objects of class Tempatures
      */
-    public Tempatures()
+    public Temperatures()
     {
         // initialise instance variables
         x = 0;
+        
+        ArrayList temperatures= new ArrayList<Double>();
+        temperatures.add(24.5);
+        temperatures.add(38.5);
+        temperatures.add(44.8);
+        temperatures.add(39.0);
+        temperatures.add(31.4);
+        temperatures.add(19.8);
+        temperatures.add(31.8);
+        temperatures.add(20.8);
+        
+        CountFever(temperatures);
+        
     }
 
     /**
@@ -25,21 +39,36 @@ public class Temperatures
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int CountFever(ArrayList<double> temperatures)
+    public void CountFever(ArrayList<Double> temperatures)
     {
-       for-each(temperatures> 37.5);
-       temparatures.Count();
-    }
-    
-    
-    public void Max(){
-        max temperature = ArrayList<double> temperatures.max()   ;
-        System.out.println(max temperature);
+        int count = 0;
+        double max = 0;
         
-    }
-    public void Sort()
-    {
-        Sort(ArrayList<double> temperatures);
-    }
     
+       for(int count:temperatures) {
+           if(temperatures > 37.5){
+               count++;
+            
+           }
+       }
+       
+    
+    
+       
+       System.out.println("Number of fever cases reported:" + count);
+       System.out.println("The max reported:" + max);
+       
+    }
 }
+    
+    // public void Max(){
+        // max temperature = ArrayList<double> temperatures.max()   ;
+        // System.out.println(max temperature);
+        
+    // }
+    // public void Sort()
+    // {
+        // Sort(ArrayList<double> temperatures);
+    // }
+    
+// }

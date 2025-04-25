@@ -24,13 +24,18 @@ public class Twostrings
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void Method() 
+    public void Compare() 
     {
-      a = new String;
-      b = new String;
-      hi = a;
-      hello = b;
-      a.equal(b)? a:b ;
+     String str1 = "hi";
+     String str2 = "hello";
+     if(str1.equals(str2)){
+         System.out.println(str1);
+     }
+     else{
+         System.out.println(str2);
+     }
+     
+     
     
     }
 }
