@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.Collections;
 /**
  * Write a description of class Tempatures here.
  *
@@ -39,16 +39,19 @@ public class Temperatures
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void CountFever(ArrayList<Double> temperatures)
+    public void CountFever(ArrayList<Double> temperatures) //Question 25
     {
         int count = 0;
         double max = 0;
         
     
-       for(int count:temperatures) {
-           if(temperatures > 37.5){
+       for(Double temp :temperatures) {
+           if(temp > 37.5){
                count++;
             
+           }
+           if (temp > max){
+               max = temp;
            }
        }
        
@@ -57,18 +60,17 @@ public class Temperatures
        
        System.out.println("Number of fever cases reported:" + count);
        System.out.println("The max reported:" + max);
+       //Question 26 - using Collections.max
+       System.out.println("Higher fever case( Collections.max):" + Collections.max(temperatures));
+       
+       //Question 27
+       Collections.sort(temperatures);
+       System.out.println("Higher fever case(Collections.sort):" + temperatures.getLast());
        
     }
-}
+
     
-    // public void Max(){
-        // max temperature = ArrayList<double> temperatures.max()   ;
-        // System.out.println(max temperature);
-        
-    // }
-    // public void Sort()
-    // {
-        // Sort(ArrayList<double> temperatures);
-    // }
     
-// }
+    
+ }
+
